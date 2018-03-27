@@ -69,6 +69,7 @@ void draw() {
 }
 //orientación  para decidir si un punto está o no el interior de un triaángulo, aplicando la orientación respectiva de un triangulo A1A2A3 
 float oriented(float x1, float x2, float x3, float y1, float y2, float y3) {
+//formula matématica para saber la orientación respectiva del triángulo.
   return (x1 - x3)*(y2 - y3) - (y1 - y3)*(x2 - x3);
 }
 
