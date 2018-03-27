@@ -30,9 +30,14 @@ Complete la tabla:
 Describa los resultados obtenidos. Qué técnicas de anti-aliasing y shading se exploraron? Adjunte las referencias. Discuta las dificultades encontradas.
 
 
+Para decidir si un punto se encontraba dentro del interior del triangulo fue necesario implementar la formula para calcular la orientación de los vértices , este calculo corresponde a:
+(A1.x - A3.x) * (A2.y - A3.y) - (A1.y - A3.y) * (A2.x - A3.x)
 
+Dado lo anterior si era mayor que sero tenia una orientación positiva en caso contrario era negativa.
 
+Lo cual generó las siguientes imagenés con aliasing y sin antialiasing:
 
+ 
 Para realizar la técnica de anti-aliasing se tuvo en cuenta que se subdividio cada uno de los pixeles(puntos) en zonas mas pequeñas, y a su vez se tuvo en cuenta que cada región tenía su respectivo  color ,
 y en cuanto la técnica de shading se exploró el color correspondiente  de cada uno de los puntos del triangulo en RGB, y a partir de este se observa que cada punto dentro dentro triangulo corresponde a una intesidad de color distinto.
 
