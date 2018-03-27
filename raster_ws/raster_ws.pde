@@ -137,6 +137,7 @@ void triangleRaster() {
             //En caso de que la orientacion sea mayor , es decir todos los puntos esten orientados en el plano positivo se dibujará el triángulo con los colores  RGB  
             if(next == "mayor"){
               if(a >= 0 && b >= 0 && c >= 0){
+                //cada punto del triangulo  se subdivide en 16
                 colors[0]+=a*255/(a+b+c)/(Math.pow(antialiasing,2));
                 colors[1]+=b*255/(a+b+c)/(Math.pow(antialiasing,2));
                 colors[2]+=c*255/(a+b+c)/(Math.pow(antialiasing,2));
@@ -147,7 +148,7 @@ void triangleRaster() {
             } else {
               //En caso contrario se encontrarán en el caso donde todos los puntos estan en la coordenada negativa , igualmente se dibujará el triángulo con los colores RGB
               if(a < 0 && b < 0 && c < 0){
-                
+                //cada punto del tringulo se subdivide en 16
                 colors[0]+=a*255/(a+b+c)/(Math.pow(antialiasing,2));
                 colors[1]+=b*255/(a+b+c)/(Math.pow(antialiasing,2));
                 colors[2]+=c*255/(a+b+c)/(Math.pow(antialiasing,2));
